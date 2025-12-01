@@ -1,0 +1,78 @@
+body {
+    background-color: #1e293b;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    width: 320px;
+    border-radius: 15px;
+    background-color: #2a3c54;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calculator input[type="text"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: #334e68;
+    color: white;
+    text-align: right;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Important: Prevents padding from increasing the element's total width */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.buttons button {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #334e68;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Important: Ensures padding doesn't affect the button's overall size */
+    width: 100%; /* Ensures buttons take up the full grid cell width */
+    height: 100%; /* Ensures buttons take up the full grid cell height */
+}
+
+.buttons button:hover {
+    background-color: #4a6985;
+}
+
+.buttons button.operator {
+    background-color: #e67e22;
+}
+
+.buttons button.operator:hover {
+    background-color: #f39c12;
+}
+
+.buttons button.clear {
+    background-color: #e74c3c;
+}
+
+.buttons button.clear:hover {
+    background-color: #c0392b;
+}
+
+.buttons button.equals {
+    background-color: #2ecc71;
+}
+
+.buttons button.equals:hover {
+    background-color: #27ae60;
+}

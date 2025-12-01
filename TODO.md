@@ -1,0 +1,4 @@
+- [x] Fix CSS link in index.html from "styles.css" to "style.css"
+- [x] Add layout styles in style.css (.container, .calculator-section, .bmi-section)
+- [ ] Add BMI calculator styles in style.css (.bmi-calculator, .input-group, inputs, button, #bmi-result)
+- [x] Add BMI category color classes in style.css (.bmi-underweight, .bmi-normal, .bmi-overweight, .bmi-obese)
