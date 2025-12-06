@@ -1,13 +1,19 @@
+let result = document.getElementById('result');
+
+function appendToResult(value) {
+    result.value += value;
+}
+
+function clearResult() {
+    result.value = '';
+}
+
 function calculateResult() {
     try {
-        let value = eval(result.value);
-        
-        // Force output to always have 2 decimal places
-        if (!isNaN(value)) {
-            result.value = Number(value).toFixed(2);
-        } else {
-            result.value = 'Error';
-        }
+        result.value = eval(result.value);
+
+        // ➤ Add two-decimal formatting only
+        result.value = Number(result.value).toFixed(2);
 
     } catch (error) {
         result.value = 'Error';
