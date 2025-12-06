@@ -1,18 +1,8 @@
-let result = document.getElementById('result');
-
-function appendToResult(value) {
-    result.value += value;
-}
-
-function clearResult() {
-    result.value = '';
-}
-
 function calculateResult() {
     try {
         result.value = eval(result.value);
 
-        // ➤ Add two-decimal formatting only
+        // Add this line to force 2 decimals
         result.value = Number(result.value).toFixed(2);
 
     } catch (error) {
