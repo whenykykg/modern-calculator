@@ -1,16 +1,14 @@
-let result = document.getElementById('result');
-
-function appendToResult(value) {
-    result.value += value;
-}
-
-function clearResult() {
-    result.value = '';
-}
-
 function calculateResult() {
     try {
-        result.value = eval(result.value);
+        let value = eval(result.value);
+        
+        // Force output to always have 2 decimal places
+        if (!isNaN(value)) {
+            result.value = Number(value).toFixed(2);
+        } else {
+            result.value = 'Error';
+        }
+
     } catch (error) {
         result.value = 'Error';
     }
